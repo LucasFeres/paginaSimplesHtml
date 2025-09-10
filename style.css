@@ -199,8 +199,8 @@ body {
     height: 100%;
     object-fit: cover;
     border-radius: 0;
-    transform: rotate(-90deg);
-    margin-left: -35px;
+    transform: rotate(0deg);
+    margin-left: 0px;
 }
 
 /* Brilhos na foto */
@@ -284,15 +284,18 @@ body {
 }
 
 .gallery-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    display: block;
     max-width: 900px;
     margin: 0 auto;
     padding: 40px;
+    text-align: center;
 }
 
 .photo-frame-gallery {
+    display: inline-block;
+    width: calc(50% - 30px);
+    margin: 0 15px 60px 15px;
+    vertical-align: top;
     background: #ffffff;
     border-radius: 15px;
     padding: 20px 20px 60px 20px;
@@ -301,6 +304,8 @@ body {
     cursor: pointer;
     position: relative;
 }
+
+
 
 .gallery-photo {
     width: 100%;
@@ -464,7 +469,7 @@ body {
     }
 }
 
-/* Responsividade */
+/* RESPONSIVIDADE LIMPA */
 @media (max-width: 768px) {
     .title {
         font-size: 2.5rem;
@@ -479,11 +484,40 @@ body {
         font-size: 1.1rem;
     }
     
-    .celebration-text {
-        font-size: 1.5rem;
+    .main-container {
+        padding: 1rem;
+    }
+    
+    /* GALERIA RESPONSIVA - 1 CARD POR LINHA */
+    .gallery-grid {
+        text-align: center !important;
+        padding: 20px !important;
+    }
+    
+    .photo-frame-gallery {
+        display: block !important;
+        width: 85% !important;
+        max-width: 300px !important;
+        margin: 0 auto 40px auto !important;
+        float: none !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 2rem;
+    }
+    
+    .photo-frame {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .romantic-message {
+        font-size: 1rem;
     }
     
     .main-container {
-        padding: 1rem;
+        padding: 0.5rem;
     }
 }

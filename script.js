@@ -107,27 +107,6 @@ function enhanceTitlePulse() {
     });
 }
 
-// Funcao para mudanca de texto romantico
-function rotateRomanticMessages() {
-    const messages = [
-        'Feliz aniversario, minha princesa! <i class="fas fa-sparkles"></i><br>Voce e a pessoa mais especial do mundo e torna cada dia mais brilhante.<br>Te amo mais que tudo! <i class="fas fa-heart"></i>',
-        'Meu amor, hoje e seu dia especial! <i class="fas fa-gift"></i><br>Voce ilumina minha vida como ninguem mais consegue.<br>Feliz aniversario, minha vida! <i class="fas fa-heart"></i>',
-        'Para a mulher mais incrivel do universo! <i class="fas fa-star"></i><br>Que este novo ano seja repleto de alegria e realizacoes.<br>Te amo infinitamente! <i class="fas fa-heart"></i>',
-        'Minha princesa, minha rainha, meu tudo! <i class="fas fa-crown"></i><br>Hoje celebramos voce e toda a felicidade que voce me traz.<br>Parabens, meu amor eterno! <i class="fas fa-heart"></i>'
-    ];
-    
-    let currentMessage = 0;
-    const messageElement = document.getElementById('romantic-text');
-    
-    setInterval(() => {
-        messageElement.style.opacity = '0';
-        setTimeout(() => {
-            currentMessage = (currentMessage + 1) % messages.length;
-            messageElement.innerHTML = messages[currentMessage];
-            messageElement.style.opacity = '1';
-        }, 500);
-    }, 8000); // Troca a cada 8 segundos
-}
 
 // Funcao de inicializacao
 function init() {
@@ -142,9 +121,6 @@ function init() {
     
     // Melhorar interacao do titulo
     enhanceTitlePulse();
-    
-    // Rotacionar mensagens romanticas
-    rotateRomanticMessages();
     
     // Adicionar efeito de clique na foto
     const photo = document.getElementById('girlfriend-photo');
